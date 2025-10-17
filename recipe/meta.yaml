@@ -1,5 +1,5 @@
 {% set name = "molbloom" %}
-{% set version = "3.3.0" %}
+{% set version = "3.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/whitead/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: d107df25663f96964b771ecc08ca01dc4fa0cc8ef0706a6eb14715522936b594
+  sha256: b9bce6e0c008ff234be03defeebc72703d1381bf8a49dc62449d9fc8bc384c21
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -22,10 +22,12 @@ requirements:
     - python
     - pip
     - cython
+    - setuptools
   run:
     - python
     - rdkit
     - importlib_resources
+    - setuptools
 
 test:
   requires:
