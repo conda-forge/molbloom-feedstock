@@ -22,10 +22,12 @@ requirements:
     - python
     - pip
     - cython
+    - setuptools
   run:
     - python
     - rdkit
     - importlib_resources
+    - setuptools
 
 test:
   requires:
