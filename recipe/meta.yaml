@@ -1,5 +1,5 @@
 {% set name = "molbloom" %}
-{% set version = "3.0.0" %}
+{% set version = "3.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/whitead/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: b9bce6e0c008ff234be03defeebc72703d1381bf8a49dc62449d9fc8bc384c21
+  sha256: 7574c4ec9ad83685198bdd484894e70da86d74843097a7fda57d7725431b5814
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   build:
